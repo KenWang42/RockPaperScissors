@@ -6,6 +6,7 @@ const playerScore_span = document.getElementById("player-score");
 const computerScore_span = document.getElementById("pc-score");
 const round_result_p = document.querySelector("#round-result > p");
 const bottom_div = document.getElementById("bottom");
+const btn_group = document.querySelectorAll("#player-section > .btn");
 
 function randomChoice(arr) {
     return arr[Math.floor(Math.random() * arr.length)]
@@ -43,14 +44,19 @@ function playRound(playerSelection) {
 
     if (computerScore >= 5){
         round_result_p.innerHTML = "You Lose the Game!";
-        bottom_div.classList.remove("hidden");
+        endGame();
     }
 
     if (playerScore >= 5){
         round_result_p.innerHTML = "You Win the Game!";
-        bottom_div.classList.remove("hidden");
+        endGame();
     }
   }
+
+function endGame(){
+    btn_group.forEach(btn => btn.disabled = true);
+    bottom_div.classList.remove("hidden");
+}
 
 function resetGame(){
     playerScore = 0;
@@ -61,4 +67,5 @@ function resetGame(){
     computerScore_span.innerHTML = 0;
     round_result_p.innerHTML = "Choose Your Move";
     bottom_div.classList.add("hidden");
+    btn_group.forEach(btn => btn.disabled = false);
 }
