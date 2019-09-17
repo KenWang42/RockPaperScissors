@@ -1,59 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rock Paper Scissors</title>
-  <link type="text/css" rel="stylesheet" href="reset.css">
-  <link type="text/css" rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/pipboy_effect.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="screen">
+    <div class="container">
+      <div class="row" id="title">
+        Rock, Paper, Scissors
+      </div>
 
-  <div class="row" id="title">
-    Rock, Paper, Scissors_
-  </div>
+      <div class="row" id="top-board">
+        <div id="round-board">
+          Round
+          <span id="round-number">0</span>
+        </div>
 
-  <div class="row" id="top-board">
-    <div id="round-board">
-      Round  
-      <span id="round-number">0</span>
+        <div id="score-board">
+          <span id="player-score">0</span>
+          :
+          <span id="pc-score">0</span>
+        </div>
+      </div>
+
+      <div class="row" id="main">
+        <section id="player-section">
+          <button
+            type="button"
+            class="btn"
+            id="rock-btn"
+            value="rock"
+            onclick="playRound('Rock')"
+          >
+            <img src="image/rock.png" class="btn_pic">
+          </button>
+
+          <button
+            type="button"
+            class="btn"
+            id="paper-btn"
+            value="paper"
+            onclick="playRound('Paper')"
+          >
+            <img src="image/paper.png"  class="btn_pic">
+          </button>
+
+          <button
+            type="button"
+            class="btn"
+            id="scis-btn"
+            value="scissors"
+            onclick="playRound('Scissors')"
+          >
+            <img src="image/scissors.png"  class="btn_pic">
+          </button>
+        </section>
+
+        <section id="round-result">
+          <p>Choose Your Move</p>
+        </section>
+      </div>
+
+      <div class="row hidden" id="bottom">
+        <button
+          type="button"
+          class="btn"
+          id="reset-btn"
+          value="reset"
+          onclick="resetGame()"
+        >
+          Reset Game
+        </button>
+      </div>
     </div>
-
-    <div id="score-board">
-      <span id="player-score">0</span>
-      :
-      <span id="pc-score">0</span>
-    </div>
-  </div>
-
-  <div class="row" id="main">
-    <section id="player-section">
-      <button type="button" class="btn" id="rock-btn" value="rock" onclick="playRound('Rock')">
-        <img src="image/rock.png" class="night-vision-effect">
-      </button>
-
-      <button type="button" class="btn" id="paper-btn" value="paper" onclick="playRound('Paper')">
-          <img src="image/paper.png" class="night-vision-effect">
-      </button>
-
-      <button type="button" class="btn" id="scis-btn" value="scissors" onclick="playRound('Scissors')">
-          <img src="image/scissors.png" class="night-vision-effect">
-      </button>
-
-    </section>
-
-    <section id="round-result">
-      <p>Choose Your Move</p>
-    </section>
-
-  </div>
-
-  <div class="row hidden" id="bottom">
-    <button type="button" class="btn" id="reset-btn" value="reset" onclick="resetGame()">
-      Reset Game
-    </button>
-  </div>
-
-  </div>
-  <script type="text/javascript" src="script.js"></script>
-</body>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet');
+
+body {
+  background-color: #000;
+  overflow-x: hidden;
+  text-shadow: 0 0 2px #c8c8c8;
+  color: rgba(20, 172, 20, 0.774);
+}
+
+.screen {
+  animation:colorPulse 5s infinite ease-in-out;
+  background-image:radial-gradient(#444, #111);
+  box-shadow:0 0 5vmin 1vmin #000 inset;
+  box-sizing:border-box;
+  font-family:'VT323', monospace;
+  font-size:20px;
+  height:100vh;
+  overflow:hidden;
+  padding:10vmin;
+  width:100vw;
+}
+
+.container {
+  padding: 50px;
+}
+
+.row {
+  text-align: center;
+}
+
+#title {
+  font-size: 60px;
+}
+
+#top-board {
+  padding: 20px 0px;
+}
+
+#round-board {
+  font-size: 50px;
+}
+
+#score-board {
+  font-size: 75px;
+}
+
+.btn {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+}
+
+.btn img {
+  height: 100px;
+  width: 100px;
+}
+
+#round-result {
+  padding: 10px 0px;
+  font-size: 48px;
+}
+
+#bottom {
+  padding: 20px 0px;
+}
+
+#reset-btn {
+  font-family: "VT323", monospace;
+  font-size: 50px;
+  text-shadow: 0 0 2px #c8c8c8;
+  color: rgba(20, 172, 20, 0.774);
+}
+
+#reset-btn:hover {
+  text-shadow: 0 0 5px white;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn_pic {
+  -webkit-filter: blur(2px);
+}
+
+.btn_pic:hover {
+  -webkit-filter: blur(2px)
+                  drop-shadow(0.05px 0.05px 0 white)
+                  drop-shadow(-0.05px -0.05px 0 white);
+}
